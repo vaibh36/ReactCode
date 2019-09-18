@@ -1,0 +1,16 @@
+{
+  "name": "nodefiles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "vaibh",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.5",
+    "mongoose-unique-validator": "^2.0.2",
+    "normalize-port": "^1.0.0"
+  }
+}

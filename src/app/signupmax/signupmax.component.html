@@ -1,0 +1,21 @@
+<form>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" placeholder="Enter email" #email>
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" placeholder="Enter password" #password>
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Activity:</label>
+    <input type="text" class="form-control" placeholder="Enter Ativity" #activity>
+  </div>
+
+  <button (click)="onSign(email.value,password.value,activity.value)">SignIn</button>
+ 
+
+</form>
+

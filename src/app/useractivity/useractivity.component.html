@@ -1,0 +1,26 @@
+<p>
+  User related activities are listed below
+</p>
+
+<button (click)="getActivities(email)">GetActivities</button>
+
+
+<ul>
+  <li *ngFor="let act of activityData">
+   {{act}}
+  </li>
+</ul>
+
+
+
+
+<form>
+<div class="form-group">
+  <label for="Add Activity">Activity:</label>
+  <input type="text" class="form-control" placeholder="Enter Activity" #activity>
+</div>
+
+<button (click)="NewActivity(activity.value)">NewActivity</button>
+
+</form>
+

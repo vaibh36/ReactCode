@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Select,View and Add the activity of your own choice</h2>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="/homepage">HomePage</a>
+      </div>
+      <ul class="nav navbar-nav topnav-right">
+        <li *ngIf="!userIsAuthentiated"><a routerLink="/login">Login</a></li>
+        <li *ngIf="!userIsAuthentiated"><a routerLink="/signup">Signup</a></li>
+        <li *ngIf="!userIsAuthentiated"><a routerLink="/gallery">Gallery</a></li>
+        
+        <li><a routerLink="/customerdashboard">customerdashboard</a></li>
+        <li *ngIf="userIsAuthentiated"> <button (click)="onLogout()">Logout</button></li>
+      </ul>
+    </div>
+  </nav>
+ 
+
+<router-outlet></router-outlet>
+
+<div>
+  <app-child1 [refValue]='dataproperty' (rvalue)="registerChild1($event)">hi</app-child1>
+</div>
+
+</div>
+

@@ -1,0 +1,19 @@
+<p>
+  gallery works!
+</p>
+
+
+<button [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+<button [class.active]="filterBy=='cars'" (click)="filterBy='cars'">cars</button>
+<button [class.active]="filterBy=='boats'" (click)="filterBy='boats'">boats</button>
+
+
+
+
+<div class="row">
+  <ul>
+    <li *ngFor="let image of (visibleImages | imageFilter:filterBy)">
+      <img src="{{image.url}}" width="200" height="160">
+    </li>
+  </ul>
+</div>
